@@ -841,9 +841,7 @@ function simSynth(individual, startState, assumeSuccess, verbose, debug, logOutp
             successProbability = 1;
         }
         var progressGain = r.bProgressGain;
-        if (progressGain > 0) {
-            s.reliability = s.reliability * successProbability;
-        }
+        s.reliability = s.reliability * successProbability;
 
         var qualityGain = condQualityIncreaseMultiplier * r.bQualityGain;
 
